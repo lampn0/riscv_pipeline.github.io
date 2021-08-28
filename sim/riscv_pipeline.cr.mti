@@ -1,0 +1,124 @@
+{C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/riscv32i/register_write.sv} {2 {vlog -work work -vopt -sv -stats=none {C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/riscv32i/register_write.sv}
+** Warning: (vlog-14) Failed to open "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/riscv_pipeline.mpf" specified by the MODELSIM environment variable.
+No such file or directory. (errno = ENOENT)
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module register_write
+
+Top level modules:
+	register_write
+
+} {} {}} {C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/riscv32i/hazard_detection_unit.sv} {0 {vlog -work work -vopt -sv -stats=none {C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/tb/tb_riscv_pipeline_top.sv}
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-6) -- Waiting for lock by "LAM.PN182628@DESKTOP-6745934, pid = 16388
+". Lockfile is "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+** Warning: (vlog-7) Failed to open lock file "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock" in create mode.
+No such file or directory. (errno = ENOENT)
+-- Cannot create lockfile "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+Verilog Compiler exiting
+** Warning: (vlog-7) Failed to open lock file "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock" in create mode.
+No such file or directory. (errno = ENOENT)
+-- Cannot create lockfile "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+Verilog Compiler exiting
+** Warning: (vlog-7) Failed to open lock file "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock" in create mode.
+No such file or directory. (errno = ENOENT)
+-- Cannot create lockfile "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+Verilog Compiler exiting
+** Warning: (vlog-7) Failed to open lock file "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock" in create mode.
+** Warning: (vlog-7) Failed to open lock file "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock" in create mode.
+No such file or directory. (errno = ENOENT)
+No such file or directory. (errno = ENOENT)
+-- Cannot create lockfile "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+-- Cannot create lockfile "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/work/_lock".
+Verilog Compiler exiting
+Verilog Compiler exiting
+
+} {} {}} {C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/tb/tb_riscv_pipeline_top.sv} {2 {vlog -work work -vopt -sv -stats=none {C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/tb/tb_riscv_pipeline_top.sv}
+** Warning: (vlog-14) Failed to open "C:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim/riscv_pipeline.mpf" specified by the MODELSIM environment variable.
+No such file or directory. (errno = ENOENT)
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module tb_riscv_pipeline_top
+
+Top level modules:
+	tb_riscv_pipeline_top
+
+} {} {}}

@@ -1,0 +1,259 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/LAM.PN182628/Dropbox/My PC (DESKTOP-55B2926)/Documents/MegaBonus/RISCV_Pipeline.github.io/sim
+T_opt
+!s110 1630148791
+VdnAjckef]]A5BT>=g>]aB1
+04 21 4 work tb_riscv_pipeline_top fast 0
+=1-30d0421069d5-612a18b7-1b5-1de0
+o-quiet -auto_acc_if_foreign -work work +acc
+Z0 tCvgOpt 0
+n@_opt
+OL;O;10.7c;67
+vcontrol
+Z1 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z2 !s110 1630148778
+!i10b 1
+!s100 4ek><eZ2]2ISg7U>=4b[Y3
+Ig>dJBZ6L6Pjg_UQ@WZ;0Q1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 control_sv_unit
+S1
+Z4 dD:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/sim/simulation_1
+w1630145933
+8D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/control.sv
+FD:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/control.sv
+Z5 L0 16
+Z6 OL;L;10.7c;67
+r1
+!s85 0
+31
+Z7 !s108 1630148778.000000
+!s107 D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/control.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/control.sv|
+!i113 0
+Z8 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R0
+vexecute
+R1
+Z9 !s110 1630148779
+!i10b 1
+!s100 faM=eR;6STHB<LeNN]I]51
+IV^jo4d2HM1A9Zeaf]52c[3
+R3
+!s105 execute_sv_unit
+S1
+R4
+w1630145846
+8D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/execute.sv
+FD:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/execute.sv
+R5
+R6
+r1
+!s85 0
+31
+Z10 !s108 1630148779.000000
+!s107 D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/execute.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/execute.sv|
+!i113 0
+R8
+R0
+vforwarding_unit
+R1
+R9
+!i10b 1
+!s100 `BX0GandLi_UXEaD]?63^3
+IU:aL>NGI7D448gMQ;b1ha1
+R3
+!s105 forwarding_unit_sv_unit
+S1
+R4
+w1630147361
+8D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/forwarding_unit.sv
+FD:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/forwarding_unit.sv
+R5
+R6
+r1
+!s85 0
+31
+R10
+!s107 D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/forwarding_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/forwarding_unit.sv|
+!i113 0
+R8
+R0
+vhazard_detection_unit
+R1
+R9
+!i10b 1
+!s100 IM40`ULYZN^_5z0:cF3CK1
+I7eFNdV?TZ;R0Bo?C4`QkI1
+R3
+!s105 hazard_detection_unit_sv_unit
+S1
+R4
+w1630144956
+8D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/hazard_detection_unit.sv
+FD:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/hazard_detection_unit.sv
+R5
+R6
+r1
+!s85 0
+31
+R10
+!s107 D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/hazard_detection_unit.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/hazard_detection_unit.sv|
+!i113 0
+R8
+R0
+vinstruction_decode
+R1
+R9
+!i10b 1
+!s100 SI<i2hA?dO9J9W[CDKB?:2
+IZ9435W]U;Vhm>GkWl<?^O1
+R3
+!s105 instruction_decode_sv_unit
+S1
+R4
+w1630143762
+8D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_decode.sv
+FD:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_decode.sv
+R5
+R6
+r1
+!s85 0
+31
+R10
+!s107 D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_decode.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_decode.sv|
+!i113 0
+R8
+R0
+vinstruction_fetch
+R1
+R9
+!i10b 1
+!s100 Ec@n]2e@VeTnJf17G6i341
+I;2RMboi5FRC:1l0FJ`Nbj2
+R3
+!s105 instruction_fetch_sv_unit
+S1
+R4
+w1630147540
+8D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_fetch.sv
+FD:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_fetch.sv
+R5
+R6
+r1
+!s85 0
+31
+R10
+!s107 D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_fetch.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_fetch.sv|
+!i113 0
+R8
+R0
+vmemory_access
+R1
+R9
+!i10b 1
+!s100 0UUlZV1NB;DWh8VXKkdLQ2
+IM7Ij_jz04PBi=Z:4flNd40
+R3
+!s105 memory_access_sv_unit
+S1
+R4
+w1630148450
+8D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/memory_access.sv
+FD:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/memory_access.sv
+R5
+R6
+r1
+!s85 0
+31
+R10
+!s107 D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/memory_access.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/memory_access.sv|
+!i113 0
+R8
+R0
+vregister_write
+R1
+R9
+!i10b 1
+!s100 A0oY3b=_HN_5]?lCjF`=b3
+IRTliH>F<i_=Uk5OTZ=cMJ1
+R3
+!s105 register_write_sv_unit
+S1
+R4
+w1630144946
+8D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/register_write.sv
+FD:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/register_write.sv
+R5
+R6
+r1
+!s85 0
+31
+R10
+!s107 D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/register_write.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/register_write.sv|
+!i113 0
+R8
+R0
+vriscv_pipeline_top
+R1
+R9
+!i10b 1
+!s100 6=^TlRl8EjZMlJ0gEOHOD3
+IW2=i92V1OVVl?d]A]019N3
+R3
+!s105 riscv_pipeline_top_sv_unit
+S1
+R4
+w1630148774
+8D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/riscv_pipeline_top.sv
+FD:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/riscv_pipeline_top.sv
+R5
+R6
+r1
+!s85 0
+31
+R10
+!s107 D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/riscv_pipeline_top.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/riscv_pipeline_top.sv|
+!i113 0
+R8
+R0
+vtb_riscv_pipeline_top
+R1
+R2
+!i10b 1
+!s100 FhfPW[cK7=Hh:DRG0DEN00
+IC0Jz>Ul_hj:VObln`LIAH0
+R3
+!s105 tb_riscv_pipeline_top_sv_unit
+S1
+R4
+w1630147563
+8D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/sim/tb/tb_riscv_pipeline_top.sv
+FD:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/sim/tb/tb_riscv_pipeline_top.sv
+L0 17
+R6
+r1
+!s85 0
+31
+R7
+!s107 D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/sim/tb/tb_riscv_pipeline_top.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/sim/tb/tb_riscv_pipeline_top.sv|
+!i113 0
+R8
+R0

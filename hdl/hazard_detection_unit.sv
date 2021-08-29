@@ -7,8 +7,8 @@
 //    Copyright © 2021 by EDABK Laboratory
 //    All rights reserved.
 //
-//    Module  : hazard_detection_unit
-//    Project : riscv_pipeline
+//    Module  : Hazard_detection_unit
+//    Project : RISC-V pipeline
 //    Author  : Pham Ngoc Lam, Nguyen Van Chien, Duong Van Bien
 //    Company : EDABK Laboratory
 //    Date    : July 23rd 2021
@@ -27,10 +27,12 @@ module hazard_detection_unit (
 //         Stalling
 //----------------------------------------------------------------
 always_comb begin : proc_stall
-  if (ID_EX_mem_read && ((ID_EX_rd == IF_ID_rs1) | (ID_EX_rd == IF_ID_rs2)) ) begin
-    pc_write    = 0;
-    IF_ID_write = 0;
-    ctrl_sel    = 0;
+  if (ID_EX_mem_read) begin
+    if (ID_EX_rd == IF_ID_rs1 | ID_EX_rd == IF_ID_rs2) begin
+      pc_write    = 0;
+      IF_ID_write = 0;
+      ctrl_sel    = 0;
+    end
   end else begin 
     pc_write    = 1;
     IF_ID_write = 1;

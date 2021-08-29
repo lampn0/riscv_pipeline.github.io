@@ -8,7 +8,7 @@
 //    All rights reserved.
 //
 //    Module  : tb_riscv_pipeline_top
-//    Project : RISC-V pipeline
+//    Project : riscv_pipeline
 //    Author  : Pham Ngoc Lam, Nguyen Van Chien, Duong Van Bien
 //    Company : EDABK Laboratory
 //    Date    : July 23rd 2021
@@ -28,11 +28,15 @@ always #5 clk = ~clk;
 initial begin
   clk = 0;
   reset_n = 1;
-  repeat(1) @(posedge clk);
+  repeat(1) @(negedge clk);
   reset_n = 0;
-  repeat(1) @(posedge clk);
+  repeat(1) @(negedge clk);
   reset_n = 1;
-  repeat(20) @(posedge clk);
+  repeat(10) @(negedge clk);
+  reset_n = 0;
+  repeat(2) @(negedge clk);
+  reset_n = 1;
+  repeat(25) @(negedge clk);
   $finish;
 end
 

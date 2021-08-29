@@ -8,7 +8,7 @@
 //    All rights reserved.
 //
 //    Module  : riscv_pipeline_top
-//    Project : riscv_pipeline
+//    Project : RISC-V pipeline
 //    Author  : Pham Ngoc Lam, Nguyen Van Chien, Duong Van Bien
 //    Company : EDABK Laboratory
 //    Date    : July 23rd 2021
@@ -24,7 +24,6 @@ module riscv_pipeline_top (
 logic [31:0]  pc_branch         ;
 logic         pc_write          ;
 logic         pc_src            ;
-logic         IF_flush          ;
 logic [31:0]  IF_ID_inst        ;
 logic [31:0]  IF_ID_pc          ;
 logic         IF_ID_write       ;
@@ -63,6 +62,7 @@ logic         EX_MEM_mem_write  ;
 logic         EX_MEM_mem_read   ;
 logic [31:0]  EX_MEM_dataB      ;
 logic [ 4:0]  EX_MEM_rd         ;
+logic [ 1:0]  EX_MEM_wb_ctrl    ;
 logic         MEM_WB_mem_to_reg ;
 logic [31:0]  MEM_WB_mem_data   ;
 logic [31:0]  MEM_WB_alu_out    ;
@@ -70,6 +70,7 @@ logic [ 4:0]  MEM_WB_rd         ;
 logic         branch            ;
 logic         mem_to_reg        ;
 logic [ 2:0]  imm_sel           ;
+logic         EX_MEM_read       ;
 
 //----------------------------------------------------------------
 //         Module Instruction Fetch
@@ -80,9 +81,9 @@ instruction_fetch instruction_fetch(
   .pc_branch  (pc_branch  ),
   .pc_write   (pc_write   ),
   .pc_src     (pc_src     ),
-  .IF_flush   (IF_flush   ),
   .IF_ID_write(IF_ID_write),
   .IF_ID_pc   (IF_ID_pc   ),
+  .IF_flush   (IF_flush   ),
   .IF_ID_inst (IF_ID_inst )
   );
 
@@ -90,44 +91,44 @@ instruction_fetch instruction_fetch(
 //         Module Instruction Decode
 //----------------------------------------------------------------
 instruction_decode instruction_decode(
-  .clk              (clk              ),
-  .reset_n          (reset_n          ),
-  .IF_ID_pc         (IF_ID_pc         ),
-  .IF_ID_inst       (IF_ID_inst       ),
-  .IF_ID_rs1        (IF_ID_inst[19:15]),
-  .IF_ID_rs2        (IF_ID_inst[24:20]),
-  .MEM_WB_reg_write (MEM_WB_reg_write ),
-  .MEM_WB_rd        (MEM_WB_rd        ),
-  .wb_data          (wb_data          ),
-  .imm_sel          (imm_sel          ),
-  .mem_to_reg       (mem_to_reg       ),
-  .reg_write        (reg_write        ),
-  .mem_write        (mem_write        ),
-  .mem_read         (mem_read         ),
-  .alu_src          (alu_src          ),
-  .alu_op           (alu_op           ),
-  .ctrl_sel         (ctrl_sel         ),
-  .forward_comp1    (forward_comp1    ),
-  .forward_comp2    (forward_comp2    ),
-  .alu_out          (alu_out          ),
-  .mem_data         (mem_data         ),
-  .pc_branch        (pc_branch        ),
-  .br_eq            (br_eq            ),
+  .clk             (clk              ),
+  .reset_n         (reset_n          ),
+  .IF_ID_pc        (IF_ID_pc         ),
+  .IF_ID_inst      (IF_ID_inst       ),
+  .IF_ID_rs1       (IF_ID_inst[19:15]),
+  .IF_ID_rs2       (IF_ID_inst[24:20]),
+  .MEM_WB_reg_write(MEM_WB_reg_write ),
+  .MEM_WB_rd       (MEM_WB_rd        ),
+  .wb_data         (wb_data          ),
+  .imm_sel         (imm_sel          ),
+  .mem_to_reg      (mem_to_reg       ),
+  .reg_write       (reg_write        ),
+  .mem_write       (mem_write        ),
+  .mem_read        (mem_read         ),
+  .alu_src         (alu_src          ),
+  .alu_op          (alu_op           ),
+  .ctrl_sel        (ctrl_sel         ),
+  .forward_comp1   (forward_comp1    ),
+  .forward_comp2   (forward_comp2    ),
+  .alu_out         (alu_out          ),
+  .mem_data        (mem_data         ),
+  .EX_MEM_alu_out   (EX_MEM_alu_out),
   .EX_MEM_mem_to_reg(EX_MEM_mem_to_reg),
-  .EX_MEM_alu_out   (EX_MEM_alu_out   ),
-  .ID_EX_mem_to_reg (ID_EX_mem_to_reg ),
-  .ID_EX_reg_write  (ID_EX_reg_write  ),
-  .ID_EX_mem_write  (ID_EX_mem_write  ),
-  .ID_EX_mem_read   (ID_EX_mem_read   ),
-  .ID_EX_alu_src    (ID_EX_alu_src    ),
-  .ID_EX_alu_op     (ID_EX_alu_op     ),
-  .ID_EX_data1      (ID_EX_data1      ),
-  .ID_EX_data2      (ID_EX_data2      ),
-  .ID_EX_rs1        (ID_EX_rs1        ),
-  .ID_EX_rs2        (ID_EX_rs2        ),
-  .ID_EX_rd         (ID_EX_rd         ),
-  .ID_EX_imm_gen    (ID_EX_imm_gen    ),
-  .ID_EX_inst_func  (ID_EX_inst_func  )
+  .pc_branch       (pc_branch        ),
+  .br_eq           (br_eq            ),
+  .ID_EX_mem_to_reg(ID_EX_mem_to_reg ),
+  .ID_EX_reg_write (ID_EX_reg_write  ),
+  .ID_EX_mem_write (ID_EX_mem_write  ),
+  .ID_EX_mem_read  (ID_EX_mem_read   ),
+  .ID_EX_alu_src   (ID_EX_alu_src    ),
+  .ID_EX_alu_op    (ID_EX_alu_op     ),
+  .ID_EX_data1     (ID_EX_data1      ),
+  .ID_EX_data2     (ID_EX_data2      ),
+  .ID_EX_rs1       (ID_EX_rs1        ),
+  .ID_EX_rs2       (ID_EX_rs2        ),
+  .ID_EX_rd        (ID_EX_rd         ),
+  .ID_EX_imm_gen   (ID_EX_imm_gen    ),
+  .ID_EX_inst_func (ID_EX_inst_func  )
   );
 
 //----------------------------------------------------------------
@@ -203,11 +204,11 @@ control control(
   .alu_src          (alu_src   ),
   .branch           (branch    ),
   .pc_src           (pc_src    ),
+  .IF_flush         (IF_flush  ),
   .mem_read         (mem_read  ),
   .mem_write        (mem_write ),
   .reg_write        (reg_write ),
   .mem_to_reg       (mem_to_reg),
-  .IF_flush         (IF_flush  ),
   .imm_sel          (imm_sel   )
   );
 

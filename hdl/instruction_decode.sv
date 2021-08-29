@@ -7,8 +7,8 @@
 //    Copyright © 2021 by EDABK Laboratory
 //    All rights reserved.
 //
-//    Module  : intruction_decode
-//    Project : riscv_pipeline
+//    Module  : Intruction_Decode
+//    Project : RISC-V pipeline
 //    Author  : Pham Ngoc Lam, Nguyen Van Chien, Duong Van Bien
 //    Company : EDABK Laboratory
 //    Date    : July 23rd 2021
@@ -103,13 +103,13 @@ always_comb begin : proc_branch
   // MUX compare 1
   case (forward_comp1)
     2'b01: data1 = alu_out;
-    2'b10: data1 = mem_data;
+    2'b10: data1 = EX_MEM_mem_to_reg ? mem_data : EX_MEM_alu_out;
     default : data1 = reg_data1;
   endcase
 // MUX compare 1
   case (forward_comp2)
     2'b01: data2 = alu_out;
-    2'b10: data2 = mem_data;
+    2'b10: data2 = EX_MEM_mem_to_reg ? mem_data : EX_MEM_alu_out;
     default : data2 = reg_data2;
   endcase
   // 
@@ -128,8 +128,7 @@ always_comb begin : proc_control_output
     out_mem_read   = mem_read  ;
     out_alu_src    = alu_src   ;
     out_alu_op     = alu_op    ;
-  end
-  else begin
+  end else begin 
     out_mem_to_reg = 0;
     out_reg_write  = 0;
     out_mem_write  = 0;
@@ -165,18 +164,18 @@ always_comb begin : proc_imm_gen
     end
     B: begin
       if (IF_ID_inst[31]) begin
-        imm_gen_out = {20'b11111111111111111111, IF_ID_inst[31], IF_ID_inst[7], IF_ID_inst[30:25], IF_ID_inst[11:8], 1'b0};
+        imm_gen_out = {21'b11111111111111111111, IF_ID_inst[31], IF_ID_inst[7], IF_ID_inst[30:25], IF_ID_inst[11:8]};
       end
       else begin
-        imm_gen_out = {20'b0, IF_ID_inst[31], IF_ID_inst[7], IF_ID_inst[30:25], IF_ID_inst[11:8], 1'b0};
+        imm_gen_out = {21'b0, IF_ID_inst[31], IF_ID_inst[7], IF_ID_inst[30:25], IF_ID_inst[11:8]};
       end
     end
     J: begin
       if (IF_ID_inst [31]) begin
-        imm_gen_out = {11'b11111111111, IF_ID_inst[31], IF_ID_inst[19:12], IF_ID_inst[20], IF_ID_inst[30:21], 1'b0};
+        imm_gen_out = {12'b11111111111, IF_ID_inst[31], IF_ID_inst[19:12], IF_ID_inst[20], IF_ID_inst[30:21]};
       end
       else begin
-        imm_gen_out = {11'b0, IF_ID_inst[31], IF_ID_inst[19:12], IF_ID_inst[20], IF_ID_inst[30:21], 1'b0};
+        imm_gen_out = {12'b0, IF_ID_inst[31], IF_ID_inst[19:12], IF_ID_inst[20], IF_ID_inst[30:21]};
       end
     end
     default : imm_gen_out = 32'b0;

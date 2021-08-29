@@ -1,4 +1,4 @@
-//---------------------------------------------------------------
+  //---------------------------------------------------------------
 //                        RISC-V Core
 //                          Ver 1.0
 //                     EDABK  Laboratory
@@ -8,7 +8,7 @@
 //    All rights reserved.
 //
 //    Module  : register_write
-//    Project : riscv_pipeline
+//    Project : RISC-V pipeline
 //    Author  : Pham Ngoc Lam, Nguyen Van Chien, Duong Van Bien
 //    Company : EDABK Laboratory
 //    Date    : July 23rd 2021

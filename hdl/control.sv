@@ -7,8 +7,8 @@
 //    Copyright © 2021 by EDABK Laboratory
 //    All rights reserved.
 //
-//    Module  : control
-//    Project : riscv_pipeline
+//    Module  : Control
+//    Project : RISC-V pipeline
 //    Author  : Pham Ngoc Lam, Nguyen Van Chien, Duong Van Bien
 //    Company : EDABK Laboratory
 //    Date    : July 23rd 2021
@@ -18,19 +18,20 @@ module control (
   input                br_eq             , // branch compare equal
   output  logic [ 1:0] alu_op            , // alu operation for alu control
   output  logic        alu_src           , // alu source mux 2to1 control
-  output  logic        branch            ,
+  output  logic        branch            , 
   output  logic        pc_src            ,
-  output  logic        mem_read          ,
-  output  logic        mem_write         ,
-  output  logic        reg_write         ,
-  output  logic        mem_to_reg        ,
   output  logic        IF_flush          ,
-  output  logic [ 2:0] imm_sel           
+  output  logic        mem_read          , 
+  output  logic        mem_write         , 
+  output  logic        reg_write         , 
+  output  logic        mem_to_reg        , 
+  output  logic [ 2:0] imm_sel             
 );
 
 logic [6:0] IF_ID_inst_opcode;
 logic [3:0] IF_ID_inst_func;
-
+assign  pc_src            = branch & br_eq;
+assign  IF_flush          = branch & br_eq;
 assign  IF_ID_inst_opcode = IF_ID_inst [6:0];
 assign  IF_ID_inst_func   = {IF_ID_inst[30],IF_ID_inst[14:12]};
 
@@ -39,6 +40,7 @@ assign  IF_ID_inst_func   = {IF_ID_inst[30],IF_ID_inst[14:12]};
 //----------------------------------------------------------------
 localparam  R_OPCODE = 7'b0110011,
             I_OPCODE = 7'b0000011,
+            ADD_I    = 7'b0010011,
             S_OPCODE = 7'b0100011,
             B_OPCODE = 7'b1100011;
 
@@ -57,7 +59,6 @@ always_comb begin : proc_control_output_compute
     alu_op      = 2'b10;
     alu_src     = 0;
     branch      = 0;
-    pc_src      = 0;
     mem_read    = 0;
     mem_write   = 0;
     reg_write   = 1;
@@ -68,8 +69,21 @@ always_comb begin : proc_control_output_compute
     alu_op      = 2'b00;
     alu_src     = 1;
     branch      = 0;
-    pc_src      = 0;
     mem_read    = 1;
+    mem_write   = 0;
+    reg_write   = 1;
+    case (IF_ID_inst_func[2:0])
+    010:  mem_to_reg = 1;
+    000:  mem_to_reg = 0;
+      default : mem_to_reg = 1;
+    endcase
+    imm_sel     = I;
+  end
+  ADD_I: begin
+    alu_op      = 2'b00;
+    alu_src     = 1;
+    branch      = 0;
+    mem_read    = 0;
     mem_write   = 0;
     reg_write   = 1;
     case (IF_ID_inst_func[2:0])
@@ -83,7 +97,6 @@ always_comb begin : proc_control_output_compute
     alu_op      = 2'b00;
     alu_src     = 1;
     branch      = 0;
-    pc_src      = 0;
     mem_read    = 0;
     mem_write   = 1;
     reg_write   = 0;
@@ -94,7 +107,6 @@ always_comb begin : proc_control_output_compute
     alu_op      = 2'b01;
     alu_src     = 0;
     branch      = 1;
-    pc_src      = 1;
     mem_read    = 0;
     mem_write   = 0;
     reg_write   = 0;
@@ -105,7 +117,6 @@ always_comb begin : proc_control_output_compute
       alu_op      = 0;
       alu_src     = 0;
       branch      = 0;
-      pc_src      = 0;
       mem_read    = 0;
       mem_write   = 0;
       reg_write   = 0;
@@ -113,12 +124,6 @@ always_comb begin : proc_control_output_compute
       imm_sel     = 0;
     end
   endcase
-end
-
-always_comb begin : proc_branch_control_hazard
-  if (branch && br_eq) begin
-    IF_flush = 1;
-  end else IF_flush = 0;
 end
 
 endmodule : control

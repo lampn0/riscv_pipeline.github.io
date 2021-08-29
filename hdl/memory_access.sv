@@ -8,7 +8,7 @@
 //    All rights reserved.
 //
 //    Module  : memory_access
-//    Project : riscv_pipeline
+//    Project : RISC-V pipeline
 //    Author  : Pham Ngoc Lam, Nguyen Van Chien, Duong Van Bien
 //    Company : EDABK Laboratory
 //    Date    : July 23rd 2021
@@ -39,7 +39,7 @@ module memory_access (
 //----------------------------------------------------------------
 //         Data Memory
 //----------------------------------------------------------------
-logic [31:0] Data_Memory[0:1023];
+logic [31:0] Data_Memory[0:128];
 
 always_ff @(posedge clk or negedge reset_n) begin : proc_
   for (int i = 0; i < 1024; i++) begin
@@ -80,4 +80,3 @@ always_ff @(posedge clk or negedge reset_n) begin : proc_mem_wb_register
 end
 
 endmodule : memory_access
-

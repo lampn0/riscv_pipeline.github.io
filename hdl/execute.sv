@@ -7,14 +7,14 @@
 //    Copyright © 2021 by EDABK Laboratory
 //    All rights reserved.
 //
-//    Module  : execute
-//    Project : riscv_pipeline
+//    Module  : Execute
+//    Project : RISC-V pipeline
 //    Author  : Pham Ngoc Lam, Nguyen Van Chien, Duong Van Bien
 //    Company : EDABK Laboratory
 //    Date    : July 23rd 2021
 //----------------------------------------------------------------
 module execute (
-  input               clk               ,  // Clock
+  input               clk               ,    // Clock
   input               reset_n           ,  // Asynchronous reset active low
   input               ID_EX_mem_to_reg  ,
   input               ID_EX_reg_write   ,
@@ -77,7 +77,7 @@ always_comb begin : proc_alu_control
       4'b0111: alu_ctrl = AND;
       4'b0110: alu_ctrl = OR ;
       4'b0100: alu_ctrl = XOR;
-      default : alu_ctrl = 4'b1111;
+        default : alu_ctrl = 4'b1111;
       endcase
   end
     default : alu_ctrl = 4'b1111;
@@ -104,12 +104,12 @@ always_comb begin : proc_ALU
   alu_inB = (ID_EX_alu_src) ? ID_EX_imm_gen : dataB;
   // ALU output
   case (alu_ctrl)
-  ADD: alu_out = dataA + dataB;
-  SUB: alu_out = dataA - dataB;
-  AND: alu_out = dataA & dataB;
-  OR : alu_out = dataA | dataB;
-  XOR: alu_out = dataA ^ dataB;
-    default : alu_out = 0;
+  ADD: alu_out = dataA + alu_inB;
+  SUB: alu_out = dataA - alu_inB;
+  AND: alu_out = dataA & alu_inB;
+  OR : alu_out = dataA | alu_inB;
+  XOR: alu_out = dataA ^ alu_inB;
+    default : alu_out = dataA;
   endcase
 end
 

@@ -1,1 +1,64 @@
+D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_decode.sv {1 {vlog -work work -vopt -sv -stats=none D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_decode.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module instruction_decode
 
+Top level modules:
+	instruction_decode
+
+} {} {}} D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/control.sv {1 {vlog -work work -vopt -sv -stats=none D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/control.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module control
+
+Top level modules:
+	control
+
+} {} {}} D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/sim/tb/tb_riscv_pipeline_top.sv {1 {vlog -work work -vopt -sv -stats=none D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/sim/tb/tb_riscv_pipeline_top.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module tb_riscv_pipeline_top
+
+Top level modules:
+	tb_riscv_pipeline_top
+
+} {} {}} D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/memory_access.sv {1 {vlog -work work -vopt -sv -stats=none D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/memory_access.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module memory_access
+
+Top level modules:
+	memory_access
+
+} {} {}} D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/forwarding_unit.sv {1 {vlog -work work -vopt -sv -stats=none D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/forwarding_unit.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module forwarding_unit
+
+Top level modules:
+	forwarding_unit
+
+} {} {}} D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/register_write.sv {1 {vlog -work work -vopt -sv -stats=none D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/register_write.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module register_write
+
+Top level modules:
+	register_write
+
+} {} {}} D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_fetch.sv {1 {vlog -work work -vopt -sv -stats=none D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/instruction_fetch.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module instruction_fetch
+
+Top level modules:
+	instruction_fetch
+
+} {} {}} D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/hazard_detection_unit.sv {1 {vlog -work work -vopt -sv -stats=none D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/hazard_detection_unit.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module hazard_detection_unit
+
+Top level modules:
+	hazard_detection_unit
+
+} {} {}} D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/execute.sv {1 {vlog -work work -vopt -sv -stats=none D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/execute.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module execute
+
+Top level modules:
+	execute
+
+} {} {}}

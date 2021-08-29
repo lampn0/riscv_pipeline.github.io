@@ -7,8 +7,8 @@
 //    Copyright © 2021 by EDABK Laboratory
 //    All rights reserved.
 //
-//    Module  : forwarding_Unit
-//    Project : riscv_pipeline
+//    Module  : Forwarding_Unit
+//    Project : RISC-V pipeline
 //    Author  : Pham Ngoc Lam, Nguyen Van Chien, Duong Van Bien
 //    Company : EDABK Laboratory
 //    Date    : July 23rd 2021

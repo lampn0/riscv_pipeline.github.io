@@ -7,8 +7,8 @@
 //    Copyright © 2021 by EDABK Laboratory
 //    All rights reserved.
 //
-//    Module  : instruction_fetch
-//    Project : riscv_pipeline
+//    Module  : Instruction_Fetch
+//    Project : RISC-V pipeline
 //    Author  : Pham Ngoc Lam, Nguyen Van Chien, Duong Van Bien
 //    Company : EDABK Laboratory
 //    Date    : July 23rd 2021
@@ -19,8 +19,8 @@ module instruction_fetch (
   input         [31:0]  pc_branch   , // PC branch
   input                 pc_write    ,
   input                 pc_src      ,
-  input                 IF_flush    ,
   input                 IF_ID_write ,
+  input                 IF_flush    ,
   output logic  [31:0]  IF_ID_pc    ,
   output logic  [31:0]  IF_ID_inst  
 );
@@ -51,7 +51,7 @@ always_ff @(posedge clk or negedge reset_n) begin : proc_pc_ff
     pc_ff <= 0;
   end 
   else if(pc_write) begin
-    pc_ff <= pc_next;
+    pc_ff <= pre_pc;
   end
   else begin
     pc_ff <= pc_ff;
@@ -80,7 +80,10 @@ localparam [31:0] NONE    = 32'h0000, // Nothing
                   INST16  = 32'h0040, // sub  x10,x12   ,x8         --> 0100000_01000_01100_000_01010_0110011
                   INST17  = 32'h0044, // addi x15,x10    ,-50       --> 111111001110_01010_000_01111_0010011
                   INST18  = 32'h0048, // lw   x14, 8(x2)            --> 000000001000_00010_010_01110_0000011
-                  INST19  = 32'h004C; // add  x5 ,x19   , x14       --> 0000000_01110_10011_000_00101_0110011
+                  INST19  = 32'h004C, // add  x5 ,x19   , x14       --> 0000000_01110_10011_000_00101_0110011
+                  INST20  = 32'h0050, // lw   x14, 10(x2)           --> 000000001010_00010_010_01110_0000011
+                  INST21  = 32'h0054, // beq  x1, x14 , offset(12)  --> 0_000000_01110_00001_000_1100_0_1100011
+                  INST22  = 32'h0058; // add  x15 ,x12   ,x14       --> 0000000_01110_01100_000_01111_0110011
 
 always_comb begin : proc_instruction_memory
   case (pc)
@@ -104,6 +107,9 @@ always_comb begin : proc_instruction_memory
     INST17  : inst = 32'b111111001110_01010_000_01111_0010011;
     INST18  : inst = 32'b000000001000_00010_010_01110_0000011;
     INST19  : inst = 32'b0000000_01110_10011_000_00101_0110011;
+    INST20  : inst = 32'b000000001010_00010_010_01110_0000011;
+    INST21  : inst = 32'b0_000000_01110_00001_000_1100_0_1100011;
+    INST22  : inst = 32'b0000000_01110_01100_000_01111_0110011;
     default : inst = 32'b0;
   endcase
 end
@@ -117,7 +123,7 @@ always_ff @(posedge clk or negedge reset_n) begin : proc_IF_ID_Register
      IF_ID_inst <= 0;
   end 
   else if(IF_flush) begin
-    // Flush Register
+    //Flush Register
     IF_ID_pc   <= 0;
     IF_ID_inst <= 0;
   end

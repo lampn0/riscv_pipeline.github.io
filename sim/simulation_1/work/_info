@@ -17,6 +17,7 @@ o-quiet -auto_acc_if_foreign -work work +acc
 Z2 tCvgOpt 0
 n@_opt
 Z3 OL;O;10.7c;67
+R0
 T_opt1
 !s110 1630171196
 VIL8a4?Il@@?VTBE7eY<_=1
@@ -29,7 +30,7 @@ R3
 R0
 vcontrol
 Z4 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-Z5 !s110 1630260728
+Z5 !s110 1630291224
 !i10b 1
 !s100 Qh@zN8@Gae?UkM_hZP`:@2
 I<JWY`JVGRocllhX]`B_5B1
@@ -45,7 +46,7 @@ Z9 OL;L;10.7c;67
 r1
 !s85 0
 31
-Z10 !s108 1630260728.000000
+Z10 !s108 1630291224.000000
 !s107 D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/control.sv|
 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/control.sv|
 !i113 0

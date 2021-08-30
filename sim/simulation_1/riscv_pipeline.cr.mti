@@ -19,6 +19,13 @@ QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 Top level modules:
 	tb_riscv_pipeline_top
 
+} {} {}} D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/riscv_pipeline_top.sv {1 {vlog -work work -vopt -sv -stats=none D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/riscv_pipeline_top.sv
+QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
+-- Compiling module riscv_pipeline_top
+
+Top level modules:
+	riscv_pipeline_top
+
 } {} {}} D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/memory_access.sv {1 {vlog -work work -vopt -sv -stats=none D:/workspace/lampn182628/computer_architecture/project/riscv_pipeline.github.io/hdl/memory_access.sv
 QuestaSim-64 vlog 10.7c Compiler 2018.08 Aug 18 2018
 -- Compiling module memory_access
